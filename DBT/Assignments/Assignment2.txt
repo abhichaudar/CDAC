@@ -1,0 +1,30 @@
+Name: Abhishek Uttam Chaudar
+PRN No:- 240840520003
+
+Assignment 2
+
+1)	Which field of the Customers table is the primary key? 
+-> Answer: CNUM  
+   Reason:- A primary key is used to uniquely identify each row in a table. 
+   In the CUSTOMERS table, the CNUM field is the primary key because each customer has a unique number in that column.
+
+
+2) What is the 4th column of the Customers table? 
+-> Answer: RATING  
+   Reason: The columns in the CUSTOMERS table are:  
+   1. CNUM  
+   2. CNAME  
+   3. CITY  
+   4. RATING  
+   So, the fourth column is RATING.
+
+
+3) What is another word for row? For column? 
+-> Another word for row is "record," and another word for column is "field."
+
+
+4) Why isn’t it possible to see the first five rows of a table? 
+-> In a DBMS , data us stored inside a file.Inside a file, rows are stored sequentially.In DBMS, there is concept of row numbering.
+   In RDBMS, table is not a file. Every row is the file.In RDBMS, rows of the table are not stored sequentially, they are not stored in any specific order.
+   Rows of the table are scattered (fragmented) all over the DB Server HD.
+
