@@ -1,0 +1,119 @@
+Name: Abhishek Uttam Chaudar
+PRN No:- 240840520003
+
+Excercise 4
+
+1. Display the minimum Status in the Supplier table.
+-->
+mysql> select min(status) from s;
++-------------+
+| min(status) |
++-------------+
+|          10 |
++-------------+
+
+
+2. Display the maximum Weight in the Parts table.
+-->
+mysql> select max(weight) from p;
++-------------+
+| max(weight) |
++-------------+
+|          14 |
++-------------+
+
+
+3. Display the average Weight of the Parts.
+-->
+mysql> select avg(weight) from p;
++-------------+
+| avg(weight) |
++-------------+
+|          13 |
++-------------+
+
+
+4. Display the total Quantity sold for part ‘P1’.
+-->
+mysql> select sum(qty) from spj
+    -> where `P#` = 'P1';
++----------+
+| sum(qty) |
++----------+
+|     1000 |
++----------+
+
+
+5. Display the total Quantity sold for each part.
+-->
+mysql> select `P#`, sum(qty) from spj
+    -> group by `P#`;
++------+----------+
+| P#   | sum(qty) |
++------+----------+
+| P1   |     1000 |
+| P2   |     2000 |
+| P3   |     3000 |
++------+----------+
+
+
+6. Display the average Quantity sold for each part.
+-->
+mysql> select `P#`, avg(qty) from spj
+    -> group by `P#`;
++------+-----------+
+| P#   | avg(qty)  |
++------+-----------+
+| P1   | 1000.0000 |
+| P2   | 2000.0000 |
+| P3   | 3000.0000 |
++------+-----------+
+
+
+7. Display the maximum Quantity sold for each part, provided the maximum Quantity
+is greater than 800.
+-->
+
+
+
+8. Display the Status and the count of Suppliers with that Status.
+-->
+ysql> select status, count(*) from s
+    -> group by status;
++--------+----------+
+| status | count(*) |
++--------+----------+
+|     10 |        1 |
+|     20 |        1 |
+|     30 |        1 |
++--------+----------+
+
+
+9. Display the count of Projects going on in different cities.
+-->
+mysql> select city, count(*) from j
+    -> group by city;
++--------+----------+
+| city   | count(*) |
++--------+----------+
+| London |        1 |
+| Paris  |        1 |
+| Athens |        1 |
++--------+----------+
+
+
+10. What is the difference between COUNT(Status) and COUNT(*) ?
+-->
+COUNT(Status) will count only non-null values
+COUNT(*) will count all rows in table , rows with null value also.
+
+11. Display the Status and the Count of Suppliers with that Status in the following format
+as shown below:-
+Status Count
+Ten 1
+Twenty 2
+Thirty 3
+-->
+
+
+

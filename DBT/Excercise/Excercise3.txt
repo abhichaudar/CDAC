@@ -1,0 +1,100 @@
+Name: Abhishek Uttam Chaudar
+PRN No:- 240840520003
+
+Excercise 3
+
+1. Display all the Supplier names with the initial letter capital.
+-->
+
+
+
+2. Display all the Supplier names in upper case.
+-->
+mysql> select UPPER(sname) from s;
++--------------+
+| UPPER(sname) |
++--------------+
+| SUPPLIER A   |
+| SUPPLIER B   |
+| SUPPLIER C   |
++--------------+
+
+
+3. Display all the Supplier names in lower case.
+-->
+mysql> select lower(sname) from s;
++--------------+
+| lower(sname) |
++--------------+
+| supplier a   |
+| supplier b   |
+| supplier c   |
++--------------+
+
+
+4. Display all the Supplier names padded to 25 characters, with spaces on the left.
+-->
+mysql> select lpad(Sname, 25,' ') from s;
++---------------------------+
+| lpad(Sname, 25,' ')       |
++---------------------------+
+|                Supplier A |
+|                Supplier B |
+|                Supplier C |
++---------------------------+
+
+
+5. Display all the Supplier names (with ‘la’ replaced by ‘ro’).
+ HINT: REPLACE.
+-->
+mysql> select replace(Sname, 'la', 'ro') from s;
++----------------------------+
+| replace(Sname, 'la', 'ro') |
++----------------------------+
+| Supplier A                 |
+| Supplier B                 |
+| Supplier C                 |
++----------------------------+
+
+
+6. Implement the above command such that ‘l’ is replaced with ‘r’ and ‘a’ is replaced
+with ‘o’.
+-->
+mysql> select replace(replace(Sname, 'l', 'r') , 'a', 'o') from s;
++----------------------------------------------+
+| replace(replace(Sname, 'l', 'r') , 'a', 'o') |
++----------------------------------------------+
+| Supprier A                                   |
+| Supprier B                                   |
+| Supprier C                                   |
++----------------------------------------------+
+
+
+7. Display the Supplier names and the lengths of the names.
+-->
+mysql> select Sname, length(Sname) from s;
++------------+---------------+
+| Sname      | length(Sname) |
++------------+---------------+
+| Supplier A |            10 |
+| Supplier B |            10 |
+| Supplier C |            10 |
++------------+---------------+
+
+
+8. Use the soundex function to search for a supplier by the name of ‘BLOKE’.
+-->
+mysql> select sname from s
+    -> where soundex(sname) = soundex('BLOKE');
+Empty set (0.05 sec)
+
+
+9. Display the Supplier name and the status (as Ten, Twenty, Thirty, etc.).
+-->
+
+
+
+10. Display the current day (e.g. Thursday)
+-->
+
+
