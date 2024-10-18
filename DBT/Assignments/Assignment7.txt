@@ -74,7 +74,16 @@ mysql> SELECT CITY, MAX(RATING) FROM CUSTOMERS
 day. (If a salesperson has more than one order on a given day, he or she should be
 counted only once.).
 -->
-
+mysql> SELECT Odate,COUNT(DISTINCT Snum) FROM orders
+    -> GROUP BY Odate;
++------------+----------------------+
+| Odate      | COUNT(DISTINCT Snum) |
++------------+----------------------+
+| 1990-10-03 |                    4 |
+| 1990-10-04 |                    2 |
+| 1990-10-05 |                    1 |
+| 1990-10-06 |                    2 |
++------------+----------------------+
 
 
 
