@@ -1,0 +1,45 @@
+body{
+    font-family: Arial;
+    background-color:ghostwhite;
+    margin: 0;
+    padding: 20px;
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px;
+}
+
+header{
+    text-align: center;
+}
+
+.profile-photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.section-education, .section-experience, .section-skills, .section-hobbies {
+    background-color:white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0; 
+ }
+ 
+
+.abc{
+    background-color:burlywood;
+    color:rgb(149, 89, 67)
+}
