@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+        function fetchData(URL, callback){
+            setTimeout(()=>{
+                const isError = Math.random() < 0.3;
+
+                if(isError){
+                    const errorMessage = 'Error fetching data from ${URL}';
+                    console.error(errorMessage);
+                    callback(errorMessage, null);
+                }
+                else{
+                    const response = 'Response from ${URL}';
+                    callback(null, response);
+                }
+            }, 3000);
+        }
+
+
+        fetchData("https://www.google.com", (error, response)=>{
+            if(error){
+                console.log("Received an error: ", error);
+            }
+            else{
+                console.log("Received response: ", response);
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

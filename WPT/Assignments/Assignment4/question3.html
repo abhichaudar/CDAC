@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+        function fetchData(URL, callback){
+            setTimeout(()=>{
+                const response = 'response ${URL}';
+                callback(response);
+            }, 3000);
+        }
+
+        fetchData("https://www.google.com", (response)=>{
+            console.log(response);
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
